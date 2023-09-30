@@ -1,0 +1,27 @@
+/* footer.css */
+
+.footer {
+  background: url(../../public/images/footer/image-6.png), lightgray 50% / cover no-repeat;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-media-list li {
+  margin-right: 10px;
+}
