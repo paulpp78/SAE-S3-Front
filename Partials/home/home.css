@@ -1,0 +1,8 @@
+* {
+  background: #f4f7ed;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
