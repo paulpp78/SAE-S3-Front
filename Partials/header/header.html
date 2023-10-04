@@ -41,6 +41,45 @@
         </div>
       </div>
     </header>
+
+    <div class="container">
+      <h1>Météo à Denain, France</h1>
+      <div id="weather-info">
+        <!-- Les informations météo seront affichées ici -->
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const apiKey = 'bdb616a0479919c67aecbc38787f1d02';
+      const city = 'Tourcoing';
+
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+      fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("La requête vers l'API a échoué");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Vérifier si les données météo sont présentes dans la réponse
+          if (data && data.main && data.main.temp) {
+            const weatherInfo = document.getElementById('weather-info');
+            const temperature = Math.round(data.main.temp - 273.15); // Conversion de Kelvin en Celsius
+
+            const weatherHTML = `
+              <p>Température : ${temperature}°C</p>
+            `;
+
+            weatherInfo.innerHTML = weatherHTML;
+          } else {
+            console.error("Données météo non disponibles dans la réponse de l'API");
+          }
+        })
+        .catch((error) => {
+          console.error('Erreur lors de la récupération des données météo', error);
+        });
+    </script>
   </body>
 </html>
