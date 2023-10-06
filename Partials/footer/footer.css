@@ -1,7 +1,7 @@
 /* footer.css */
 
 .footer {
-  background: url(../../public/images/footer/image-6.png), lightgray 50% / cover no-repeat;
+  background: #13adef;
 }
 .footer-container {
   display: grid;
