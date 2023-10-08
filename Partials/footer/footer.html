@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="footer.css" />
+    <link rel="stylesheet" type="text/css" href="footer/footer.css" />
+    <!-- <link rel="stylesheet" href="footer.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   </head>
   <footer class="footer" id="footer">
-    <section class="contact">
-      <div>
-        <h2>Nous contacter</h2>
-        <p>Av, Michel Rondet.</p>
-        <p>59135 Wallers</p>
-        <i class="fa-solid fa-envelope"></i><i class="fa-brands fa-linkedin"></i><i class="fa-brands fa-facebook"></i>
-        <p><i class="fa-regular fa-phone" style="color: #ffffff"></i> Bureau : 03 27 09 05 05</p>
-      </div>
-    </section>
-    <section class="navigation">
-      <div>
-        <h2>Navigation</h2>
-        <p>Plan du site</p>
-        <p>Presse</p>
-        <p>Numéros utiles</p>
-        <p>Liens utiles</p>
-      </div>
-    </section>
-    <section class="mentionlégales">
-      <div>
-        <h2>Mentions légales</h2>
-        <p>Conditions générales</p>
-        <p>Politique de cookies</p>
-        <p>Données personnelles</p>
-      </div>
-    </section>
+    <div class="footer-container">
+      <section class="section contact">
+        <div>
+          <h2>Nous contacter</h2>
+          <p>Av, Michel Rondet.</p>
+          <p>59135 Wallers</p>
+          <i class="fa-solid fa-envelope"></i><i class="fa-brands fa-linkedin"></i><i class="fa-brands fa-facebook"></i>
+          <p><i class="fa-regular fa-phone" style="color: #ffffff"></i> Bureau : 03 27 09 05 05</p>
+          <button type="button" class="btn btn-primary btn-lg custom-button">Contactez Nous</button>
+        </div>
+      </section>
+      <section class="section navigation">
+        <div>
+          <h2>Navigation</h2>
+          <p>Plan du site</p>
+          <p>Presse</p>
+          <p>Numéros utiles</p>
+          <p>Liens utiles</p>
+        </div>
+      </section>
+      <section class="section mentionlégales">
+        <div>
+          <h2>Mentions légales</h2>
+          <p>Conditions générales</p>
+          <p>Politique de cookies</p>
+          <p>Données personnelles</p>
+        </div>
+      </section>
+    </div>
 
     <section class="search-bar">
-      <span>Rejoindre la Newsletter <input type="text" name="q" placeholder="Saisissez votre mail ici..." /></span>
+      <span class="search-text">Rejoindre la Newsletter</span>
+      <input type="text" class="search-input" name="q" placeholder="Saisissez votre mail ici..." />
     </section>
 
-    <p>Tous droits réservés</p>
+    <p class="copy-right">Tous droits réservés</p>
   </footer>
 
   <script src="https://kit.fontawesome.com/e7eee140d6.js" crossorigin="anonymous"></script>
