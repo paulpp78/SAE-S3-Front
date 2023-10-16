@@ -3,10 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: [
-    './footer.component.css',
-    '../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-  ],
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
   address: string = 'Av, Michel Rondet.';
