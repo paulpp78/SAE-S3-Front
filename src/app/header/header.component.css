@@ -1,0 +1,16 @@
+/* styles.css */
+.home-background {
+  background-image: url("../../assets/header/home.png");
+}
+
+.communaute-background {
+  background-image: url("../../assets/header/communauté.jpeg");
+}
+
+.evenement-background {
+  background-image: url("../../assets/header/home.png");
+}
+
+.contact-background {
+  background-image: url("../../assets/header/contact.png");
+}
