@@ -1,0 +1,52 @@
+<!-- footer.component.html -->
+<footer class="footer" id="footer">
+  <div class="footer-container">
+    <section class="section contact">
+      <div>
+        <h2>Nous contacter</h2>
+        <p>{{ address }}</p>
+        <p>{{ city }}</p>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <p>
+          <i class="fa-regular fa-phone" style="color: #ffffff"></i> Bureau :
+          {{ phoneNumber }}
+        </p>
+        <button
+          (click)="onContactButtonClicked()"
+          class="btn btn-primary btn-lg custom-button"
+        >
+          Contactez Nous
+        </button>
+      </div>
+    </section>
+    <section class="section navigation">
+      <div>
+        <h2>Navigation</h2>
+        <p>Plan du site</p>
+        <p>Presse</p>
+        <p>Numéros utiles</p>
+        <p>Liens utiles</p>
+      </div>
+    </section>
+    <section class="section mentionlégales">
+      <div>
+        <h2>Mentions légales</h2>
+        <p>Conditions générales</p>
+        <p>Politique de cookies</p>
+        <p>Données personnelles</p>
+      </div>
+    </section>
+  </div>
+  <section class="search-bar">
+    <span class="search-text">Rejoindre la Newsletter</span>
+    <input
+      type="text"
+      class="search-input"
+      name="q"
+      placeholder="Saisissez votre mail ici..."
+    />
+  </section>
+  <p class="copy-right">Tous droits réservés</p>
+</footer>
