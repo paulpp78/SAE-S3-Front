@@ -1,27 +1,127 @@
 # SaeFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
-## Development server
+## Prérequis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Avant de cloner ce projet, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) : Plateforme permettant d'exécuter du code JavaScript côté serveur.
+- [npm](https://www.npmjs.com/) (Node Package Manager) : Gestionnaire de paquets pour Node.js, utilisé pour installer les dépendances du projet.
+- [Angular CLI](https://angular.io/cli) : Interface de ligne de commande pour Angular, qui facilite la création, le développement et le déploiement d'applications Angular.
+- [Git](https://git-scm.com/) : Système de contrôle de version utilisé pour cloner le projet et gérer les modifications du code source.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Introduction
 
-## Build
+Ce projet Angular est une application front-end de refonte du site de la communauté d'agglomération de La Porte du Hainaut.
+Dans ce README, nous expliquerons comment cloner le projet, l'exécuter en local, et quelques informations importantes sur la structure du projet.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Cloner le projet
 
-## Running unit tests
+Pour cloner ce projet sur votre machine locale, assurez-vous d'avoir Git installé. Ensuite, exécutez la commande suivante :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone <git@github.com>:paulpp78/SAE-S3-Front.git main
+```
 
-## Running end-to-end tests
+Une fois le projet cloné, accédez au répertoire du projet à l'aide de la commande `cd` :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+cd SaeFront
+```
 
-## Further help
+## Installer les dépendances
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pour installer les dépendances nécessaires, exécutez la commande suivante à la racine du projet :
+
+```bash
+npm install
+```
+
+## Serveur de développement
+
+Pour lancer le serveur de développement, exécutez la commande suivante :
+
+```bash
+ng serve
+```
+
+Cela démarrera un serveur de développement et l'application sera accessible à l'adresse : `<http://localhost:4200/`>. L'application sera automatiquement rechargée si vous modifiez des fichiers source.
+
+## Structure du projet
+
+Le projet Angular suit une structure conventionnelle qui ressemble à ceci :
+
+```sh
+SaeFront/
+│
+├── src/
+│ ├── app/
+│ │ ├── components/ # Composants de l'application
+│ │ ├── services/ # Services pour la logique métier
+│ │ ├── models/ # Modèles de données
+│ │ ├── app-routing.module.ts # Configuration des routes
+│ │ ├── app.module.ts # Configuration du module principal
+│ │
+│ ├── assets/ # Fichiers statiques (images, styles, etc.)
+│
+├── angular.json # Configuration globale du projet
+├── package.json # Liste des dépendances et scripts
+├── README.md # Ce fichier
+```
+
+## Génération de code
+
+Angular CLI facilite la génération de composants, services et d'autres artefacts. Voici comment vous pouvez générer ces éléments :
+
+- Générer un composant :
+
+  ```bash
+  ng generate component nom-du-composant
+  ```
+
+- Générer un service :
+
+  ```bash
+  ng generate service nom-du-service
+  ```
+
+## Compilation du projet
+
+Pour construire le projet pour la production, exécutez la commande suivante :
+
+```bash
+ng build
+```
+
+Les artefacts de construction seront stockés dans le répertoire `dist/`.
+
+## Tests unitaires
+
+Pour exécuter les tests unitaires, utilisez la commande suivante :
+
+```bash
+ng test
+```
+
+Cela exécutera les tests unitaires à l'aide de Karma.
+
+## Tests end-to-end
+
+Pour exécuter des tests end-to-end, utilisez la commande suivante :
+
+```bash
+ng e2e
+```
+
+Vous devrez d'abord ajouter un package qui implémente des capacités de test end-to-end.
+
+## Besoin d'aide supplémentaire
+
+Si vous avez besoin d'aide supplémentaire sur l'utilisation de la CLI Angular, vous pouvez exécuter la commande suivante :
+
+```bash
+ng help
+```
+
+Vous pouvez également consulter la [page Angular CLI Overview and Command Reference](https://angular.io/cli) pour plus d'informations.
