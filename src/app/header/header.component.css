@@ -1,9 +1,21 @@
-/* styles.css */
+.header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+}
+
 .home-background {
   background-image: url("../../assets/header/home.png");
 }
 
-.communaute-background {
+communaute-background {
   background-image: url("../../assets/header/communauté.jpeg");
 }
 
@@ -11,6 +23,65 @@
   background-image: url("../../assets/header/home.png");
 }
 
-.contact-background {
+contact-background {
   background-image: url("../../assets/header/contact.png");
+}
+
+.btn,
+.btn-link {
+  background-color: #7e7a7a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn-link:hover {
+  background-color: #7e7a7a;
+}
+
+.navbar-brand img {
+  width: 50%;
+  margin-right: 10%;
+}
+
+.navbar.navbar-expand-lg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.btn-nav-imp {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.meteo {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar.navbar-expand-lg {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand img {
+    width: 80px;
+  }
+
+  .btn-nav-imp {
+    margin-top: 20px;
+  }
+
+  .meteo {
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }

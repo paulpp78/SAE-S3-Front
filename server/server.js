@@ -1,15 +1,20 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const cors = require("cors");
+const fs = require("fs");
+const configFile = fs.readFileSync("config.json", "utf8");
+const config = JSON.parse(configFile);
 
-const PORT = process.env.PORT || 3000;
+app.use(cors({ origin: config.corsConf }));
+app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, config.staticDirectory)));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, config.staticDirectory, config.firstPage));
 });
 
-app.listen(PORT, () => {
-  console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+app.listen(config.port, () => {
+  console.log(`Serveur en cours d'exécution sur le port ${config.port}`);
 });
