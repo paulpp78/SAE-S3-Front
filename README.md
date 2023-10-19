@@ -94,7 +94,25 @@ Pour construire le projet pour la production, exécutez la commande suivante :
 ng build
 ```
 
-Les artefacts de construction seront stockés dans le répertoire `dist/`.
+Les artefacts de construction seront stockés dans le répertoire `server/dist/`.
+
+Vous executerez la commande
+
+```bash
+cd server
+```
+
+Puis vous installerez les dépendances
+
+```bash
+npm install
+```
+
+Puis demmarez le server
+
+```bash
+npm start
+```
 
 ## Tests unitaires
 
