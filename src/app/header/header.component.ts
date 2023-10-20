@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-
   updateBackgroundClasses(url: string) {
     const header = document.querySelector('.header') as HTMLElement;
 

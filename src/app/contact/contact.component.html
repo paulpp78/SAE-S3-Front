@@ -1,115 +1,103 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
-    />
-  </head>
+<div id="part_one">
+  <div id="FAQ">
+    <i [class]="faqData.iconClass"></i>
+    <h4>{{ faqData.title }}</h4>
+  </div>
 
-  <div id="part_one">
-    <div id="FAQ">
-      <i [class]="faqData.iconClass"></i>
-      <h4>{{ faqData.title }}</h4>
-    </div>
+  <div id="recrutement" (click)="openRecruitmentModal()">
+    <i [class]="recruitmentData.iconClass"></i>
+    <h4>{{ recruitmentData.title }}</h4>
+  </div>
 
-    <div id="recrutement" (click)="openRecruitmentModal()">
-      <i [class]="recruitmentData.iconClass"></i>
-      <h4>{{ recruitmentData.title }}</h4>
-    </div>
+  <div id="map">
+    <a [href]="mapData.link">
+      <i [class]="mapData.iconClass"></i>
+    </a>
+    <h4>{{ mapData.title }}</h4>
+  </div>
 
-    <div id="map">
-      <a [href]="mapData.link">
-        <i [class]="mapData.iconClass"></i>
+  <div id="mail">
+    <a [href]="'mailto:' + mailData.email">
+      <i [class]="mailData.iconClass"></i>
+    </a>
+    <h4>{{ mailData.title }}</h4>
+  </div>
+</div>
+<div id="info">
+  <div id="tel">
+    <h3>Discutons ensemble</h3>
+    <p>{{ contactInfo.phone }}</p>
+    <p>{{ contactInfo.hours }}</p>
+  </div>
+  <div id="lieu">
+    <h3>Viens à notre rencontre</h3>
+    <p>
+      {{ contactInfo.location.address }}<br />
+      {{ contactInfo.location.city }}
+    </p>
+  </div>
+  <div id="reseau">
+    <h3>Connecte-toi à nous</h3>
+    <div id="icon">
+      <a [href]="contactInfo.socialMediaLinks.facebook">
+        <i class="iconoir-facebook"></i>
       </a>
-      <h4>{{ mapData.title }}</h4>
-    </div>
-
-    <div id="mail">
-      <a [href]="'mailto:' + mailData.email">
-        <i [class]="mailData.iconClass"></i>
+      <a [href]="contactInfo.socialMediaLinks.twitter">
+        <i class="iconoir-twitter"></i>
       </a>
-      <h4>{{ mailData.title }}</h4>
+      <a [href]="contactInfo.socialMediaLinks.linkedin">
+        <i class="iconoir-linkedin"></i>
+      </a>
     </div>
   </div>
-  <div id="info">
-    <div id="tel">
-      <h3>Discutons ensemble</h3>
-      <p>{{ contactInfo.phone }}</p>
-      <p>{{ contactInfo.hours }}</p>
-    </div>
-    <div id="lieu">
-      <h3>Viens à notre rencontre</h3>
-      <p>
-        {{ contactInfo.location.address }}<br />
-        {{ contactInfo.location.city }}
-      </p>
-    </div>
-    <div id="reseau">
-      <h3>Connecte-toi à nous</h3>
-      <div id="icon">
-        <a [href]="contactInfo.socialMediaLinks.facebook">
-          <i class="iconoir-facebook"></i>
-        </a>
-        <a [href]="contactInfo.socialMediaLinks.twitter">
-          <i class="iconoir-twitter"></i>
-        </a>
-        <a [href]="contactInfo.socialMediaLinks.linkedin">
-          <i class="iconoir-linkedin"></i>
-        </a>
-      </div>
-    </div>
+</div>
+
+<div id="modalRecrutement" class="modal" (click)="closeRecruitmentModal()">
+  <div class="modal-content" (click)="stopPropagation($event)">
+    <span class="close-btn" (click)="closeRecruitmentModal()">&times;</span>
+    <form (submit)="submitApplication()">
+      <label for="poste">Poste demandé :</label>
+      <select id="poste" name="poste" [(ngModel)]="selectedPost">
+        <option value="developpeur">Développeur</option>
+        <option value="designer">Designer</option>
+        <option value="chef_projet">Chef de projet</option>
+      </select>
+      <br /><br />
+
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required [(ngModel)]="nom" />
+      <br /><br />
+
+      <label for="prenom">Prénom :</label>
+      <input
+        type="text"
+        id="prenom"
+        name="prenom"
+        required
+        [(ngModel)]="prenom"
+      />
+      <br /><br />
+
+      <label for="telephone">Numéro de téléphone :</label>
+      <input
+        type="text"
+        id="telephone"
+        name="telephone"
+        [(ngModel)]="telephone"
+      />
+      <br /><br />
+
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        [(ngModel)]="email"
+      />
+      <br /><br />
+
+      <input type="submit" value="Envoyer" />
+    </form>
   </div>
-
-  <div id="modalRecrutement" class="modal" (click)="closeRecruitmentModal()">
-    <div class="modal-content" (click)="stopPropagation($event)">
-      <span class="close-btn" (click)="closeRecruitmentModal()">&times;</span>
-      <form (submit)="submitApplication()">
-        <label for="poste">Poste demandé :</label>
-        <select id="poste" name="poste" [(ngModel)]="selectedPost">
-          <option value="developpeur">Développeur</option>
-          <option value="designer">Designer</option>
-          <option value="chef_projet">Chef de projet</option>
-        </select>
-        <br /><br />
-
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required [(ngModel)]="nom" />
-        <br /><br />
-
-        <label for="prenom">Prénom :</label>
-        <input
-          type="text"
-          id="prenom"
-          name="prenom"
-          required
-          [(ngModel)]="prenom"
-        />
-        <br /><br />
-
-        <label for="telephone">Numéro de téléphone :</label>
-        <input
-          type="text"
-          id="telephone"
-          name="telephone"
-          [(ngModel)]="telephone"
-        />
-        <br /><br />
-
-        <label for="email">Email :</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          [(ngModel)]="email"
-        />
-        <br /><br />
-
-        <input type="submit" value="Envoyer" />
-      </form>
-    </div>
-  </div>
-</html>
+</div>
