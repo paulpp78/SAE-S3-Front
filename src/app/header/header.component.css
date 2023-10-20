@@ -1,3 +1,4 @@
+/* Styles du header */
 .header {
   background-size: cover;
   background-position: center;
@@ -10,6 +11,8 @@
   color: #fff;
   flex-direction: column;
 }
+
+/* Styles pour le bouton et la météo */
 .buttonAndWeather {
   text-align: center;
 }
@@ -19,6 +22,14 @@
   border: none;
   cursor: pointer;
 }
+
+.meteo {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* Styles pour les arrière-plans spécifiques aux pages */
 .home-background {
   background-image: url("../../assets/header/home.png");
 }
@@ -35,6 +46,7 @@
   background-image: url("../../assets/header/contact.png");
 }
 
+/* Styles pour les boutons et liens */
 .btn,
 .btn-link {
   background-color: #7e7a7a;
@@ -49,6 +61,7 @@
   background-color: #7e7a7a;
 }
 
+/* Styles pour la barre de navigation */
 .navbar-brand img {
   width: 50%;
   margin-right: 10%;
@@ -68,12 +81,7 @@
   cursor: pointer;
 }
 
-.meteo {
-  font-size: 18px;
-  color: #fff;
-  margin: 10px 0;
-}
-
+/* Styles responsifs pour les petits écrans */
 @media (max-width: 768px) {
   .navbar.navbar-expand-lg {
     flex-direction: column;

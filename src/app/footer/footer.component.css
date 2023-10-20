@@ -70,6 +70,10 @@
   background: #fff;
 }
 
+.socialnetwork svg {
+  margin-right: 2%;
+}
+
 @media screen and (min-width: 1200px) {
   .search-bar {
     width: 1074px;
