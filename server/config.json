@@ -1,6 +1,6 @@
 {
   "corsConf": "https://example.com",
-  "port": 3000,
+  "port": 80,
   "staticDirectory": "dist",
   "firstPage": "index.html"
 }

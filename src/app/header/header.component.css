@@ -10,12 +10,20 @@
   color: #fff;
   flex-direction: column;
 }
+.buttonAndWeather {
+  text-align: center;
+}
 
+.buttonAndWeather button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .home-background {
   background-image: url("../../assets/header/home.png");
 }
 
-communaute-background {
+.communaute-background {
   background-image: url("../../assets/header/communauté.jpeg");
 }
 
@@ -23,7 +31,7 @@ communaute-background {
   background-image: url("../../assets/header/home.png");
 }
 
-contact-background {
+.contact-background {
   background-image: url("../../assets/header/contact.png");
 }
 

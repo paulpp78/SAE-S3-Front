@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   updateBackgroundClasses(url: string) {
     const header = document.querySelector('.header') as HTMLElement;
 
-    // Supprimez les classes de fond existantes
     header.classList.remove(
       'home-background',
       'communaute-background',
@@ -25,16 +24,13 @@ export class HeaderComponent implements OnInit {
       'contact-background'
     );
 
-    // Ajoutez la classe de fond correspondante en fonction de la route
-    if (url === '/home') {
-      header.classList.add('home-background');
-    } else if (url === '/communaute') {
+    if (url === '/communaute') {
       header.classList.add('communaute-background');
     } else if (url === '/evenement') {
       header.classList.add('evenement-background');
     } else if (url === '/contact') {
       header.classList.add('contact-background');
-    }
+    } else header.classList.add('home-background');
   }
 
   isMenuClosed: boolean = true;
