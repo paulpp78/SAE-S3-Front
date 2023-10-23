@@ -96,7 +96,9 @@ ng build
 
 Les artefacts de construction seront stockés dans le répertoire `server/dist/`.
 
-Vous executerez la commande
+### Serveur de production
+
+Nous avons ajouté un server pour la production, pour le lancer, vous devez vous rendre dans le dossier server.
 
 ```bash
 cd server

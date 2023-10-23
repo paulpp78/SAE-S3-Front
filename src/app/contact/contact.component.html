@@ -1,103 +1,113 @@
-<div id="part_one">
-  <div id="FAQ">
-    <i [class]="faqData.iconClass"></i>
-    <h4>{{ faqData.title }}</h4>
-  </div>
+<div class="container">
+  <div id="part_one">
+    <div id="FAQ">
+      <a (click)="openFAQ()"><i class="iconoir-chat-bubble-empty"></i></a>
+      <h4>FAQ</h4>
+    </div>
 
-  <div id="recrutement" (click)="openRecruitmentModal()">
-    <i [class]="recruitmentData.iconClass"></i>
-    <h4>{{ recruitmentData.title }}</h4>
-  </div>
+    <div id="recrutement">
+      <a (click)="openRecrutement()"><i class="iconoir-empty-page"></i></a>
+      <h4>LA PORTE RECRUTE</h4>
+    </div>
 
-  <div id="map">
-    <a [href]="mapData.link">
-      <i [class]="mapData.iconClass"></i>
-    </a>
-    <h4>{{ mapData.title }}</h4>
-  </div>
+    <div id="map">
+      <a href="https://porte-du-hainaut.carte-interactive.net/#/home"
+        ><i class="iconoir-map"></i
+      ></a>
+      <h4>DÉCOUVRIR LA COMMUNE</h4>
+    </div>
 
-  <div id="mail">
-    <a [href]="'mailto:' + mailData.email">
-      <i [class]="mailData.iconClass"></i>
-    </a>
-    <h4>{{ mailData.title }}</h4>
-  </div>
-</div>
-<div id="info">
-  <div id="tel">
-    <h3>Discutons ensemble</h3>
-    <p>{{ contactInfo.phone }}</p>
-    <p>{{ contactInfo.hours }}</p>
-  </div>
-  <div id="lieu">
-    <h3>Viens à notre rencontre</h3>
-    <p>
-      {{ contactInfo.location.address }}<br />
-      {{ contactInfo.location.city }}
-    </p>
-  </div>
-  <div id="reseau">
-    <h3>Connecte-toi à nous</h3>
-    <div id="icon">
-      <a [href]="contactInfo.socialMediaLinks.facebook">
-        <i class="iconoir-facebook"></i>
-      </a>
-      <a [href]="contactInfo.socialMediaLinks.twitter">
-        <i class="iconoir-twitter"></i>
-      </a>
-      <a [href]="contactInfo.socialMediaLinks.linkedin">
-        <i class="iconoir-linkedin"></i>
-      </a>
+    <div id="mail">
+      <a href="mailto:prenom.nom@etu.u-paris.fr"
+        ><i class="iconoir-mail"></i
+      ></a>
+      <h4>ÉCRIT-NOUS</h4>
     </div>
   </div>
-</div>
 
-<div id="modalRecrutement" class="modal" (click)="closeRecruitmentModal()">
-  <div class="modal-content" (click)="stopPropagation($event)">
-    <span class="close-btn" (click)="closeRecruitmentModal()">&times;</span>
-    <form (submit)="submitApplication()">
-      <label for="poste">Poste demandé :</label>
-      <select id="poste" name="poste" [(ngModel)]="selectedPost">
-        <option value="developpeur">Développeur</option>
-        <option value="designer">Designer</option>
-        <option value="chef_projet">Chef de projet</option>
-      </select>
-      <br /><br />
+  <div id="info">
+    <div id="tel">
+      <h3>Discutons ensemble</h3>
+      <p>03 27 09 05 05<br />8h-12h 14-20h</p>
+    </div>
+    <div id="lieu">
+      <h3>Viens à notre rencontre</h3>
+      <p>
+        <a
+          href="https://www.google.com/maps?q=Site+Minier+de+Wallers-Arenberg,+Rue+Michel-Rondet,+59135+WALLERS-ARENBERG&hl=fr"
+          target="_blank"
+          >Site Minier de Wallers-Arenberg<br />Rue Michel-Rondet - BP 59<br />59135
+          WALLERS-ARENBERG</a
+        >
+      </p>
+    </div>
+    <div id="reseau">
+      <h3>Connecte toi à nous</h3>
+      <div id="icon">
+        <a href="https://www.facebook.com/LaPorteduHainaut"
+          ><i class="iconoir-facebook"></i
+        ></a>
+        <a
+          href="https://twitter.com/i/flow/login?redirect_after_login=%2FPorteduHainaut"
+          ><i class="iconoir-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com/company/la-porte-du-hainaut/"
+          ><i class="iconoir-linkedin"></i
+        ></a>
+      </div>
+    </div>
+  </div>
 
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required [(ngModel)]="nom" />
-      <br /><br />
+  <div id="modalFAQ" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" (click)="closeFAQ()">&times;</span>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Où se situe Porte du Hainaut?</div>
+          <div class="faq-answer">
+            Porte du Hainaut est une commune située dans la région [Nom de la
+            région], en France.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Où puis-je trouver plus d'informations sur Porte du Hainaut?
+          </div>
+          <div class="faq-answer">
+            Vous pouvez consulter le site officiel de la commune ou passer par
+            l'office de tourisme situé à [adresse].
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <label for="prenom">Prénom :</label>
-      <input
-        type="text"
-        id="prenom"
-        name="prenom"
-        required
-        [(ngModel)]="prenom"
-      />
-      <br /><br />
-
-      <label for="telephone">Numéro de téléphone :</label>
-      <input
-        type="text"
-        id="telephone"
-        name="telephone"
-        [(ngModel)]="telephone"
-      />
-      <br /><br />
-
-      <label for="email">Email :</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        [(ngModel)]="email"
-      />
-      <br /><br />
-
-      <input type="submit" value="Envoyer" />
-    </form>
+  <div id="modalRecrutement" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" (click)="closeRecrutement()">&times;</span>
+      <form (submit)="submitRecrutementForm($event)">
+        <label for="poste">Poste demandé :</label>
+        <select id="poste" name="poste">
+          <option value="developpeur">Développeur</option>
+          <option value="designer">Designer</option>
+          <option value="chef_projet">Chef de projet</option>
+        </select>
+        <div class="name-wrapper">
+          <div class="input-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="input-group">
+            <label for="prenom">Prenom :</label>
+            <input type="text" id="prenom" name="prenom" required />
+          </div>
+        </div>
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="text" id="telephone" name="telephone" /><br /><br />
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <input type="submit" value="Envoyer" />
+      </form>
+    </div>
   </div>
 </div>

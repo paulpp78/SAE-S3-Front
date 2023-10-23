@@ -1,77 +1,65 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent {
-  faqData = {
-    iconClass: 'iconoir-chat-bubble-empty',
-    title: 'FAQ',
-  };
+export class ContactComponent implements OnInit {
+  modalRecrutement: HTMLElement | null = null;
+  modalFAQ: HTMLElement | null = null;
+  isMenuClosed = true;
 
-  recruitmentData = {
-    iconClass: 'iconoir-empty-page',
-    title: 'LA PORTE RECRUTE',
-  };
+  constructor() {}
 
-  mapData = {
-    iconClass: 'iconoir-map',
-    title: 'DÉCOUVRIR LA COMMUNE',
-    link: 'https://porte-du-hainaut.carte-interactive.net/#/home',
-  };
+  ngOnInit(): void {
+    this.modalRecrutement = document.getElementById('modalRecrutement');
+    this.modalFAQ = document.getElementById('modalFAQ');
+  }
 
-  mailData = {
-    iconClass: 'iconoir-mail',
-    title: 'ÉCRIS-NOUS',
-    email: 'prenom.nom@etu.u-paris.fr',
-  };
-
-  contactInfo = {
-    phone: '03 27 09 05 05',
-    hours: '8h-12h 14-20h',
-    location: {
-      address: 'Site Minier de Wallers-Arenberg',
-      city: '59135 WALLERS-ARENBERG',
-    },
-    socialMediaLinks: {
-      facebook: 'https://www.facebook.com/LaPorteduHainaut',
-      twitter:
-        'https://twitter.com/i/flow/login?redirect_after_login=%2FPorteduHainaut',
-      linkedin: 'https://www.linkedin.com/company/la-porte-du-hainaut/',
-    },
-  };
-  selectedPost: string = 'developpeur';
-  nom: string = '';
-  prenom: string = '';
-  telephone: string = '';
-  email: string = '';
-
-  openRecruitmentModal() {
-    const modal = document.getElementById('modalRecrutement');
-    if (modal) {
-      modal.style.display = 'block';
+  openFAQ() {
+    if (this.modalFAQ) {
+      this.modalFAQ.style.display = 'block';
+      this.isMenuClosed = false;
     }
   }
 
-  closeRecruitmentModal() {
-    const modal = document.getElementById('modalRecrutement');
-    if (modal) {
-      modal.style.display = 'none';
+  openRecrutement() {
+    if (this.modalRecrutement) {
+      this.modalRecrutement.style.display = 'block';
+      this.isMenuClosed = false;
     }
   }
 
-  stopPropagation(event: MouseEvent) {
-    event.stopPropagation();
+  closeFAQ() {
+    if (this.modalFAQ) {
+      this.modalFAQ.style.display = 'none';
+      this.isMenuClosed = true;
+    }
   }
 
-  submitApplication() {
-    console.log('Formulaire soumis avec succès !');
-    console.log('Poste demandé :', this.selectedPost);
-    console.log('Nom :', this.nom);
-    console.log('Prénom :', this.prenom);
-    console.log('Téléphone :', this.telephone);
-    console.log('Email :', this.email);
+  closeRecrutement() {
+    if (this.modalRecrutement) {
+      this.modalRecrutement.style.display = 'none';
+      this.isMenuClosed = true;
+    }
+  }
+
+  submitRecrutementForm(event: Event) {
+    event.preventDefault();
+
+    const poste = (document.getElementById('poste') as HTMLSelectElement).value;
+    const nom = (document.getElementById('nom') as HTMLInputElement).value;
+    const prenom = (document.getElementById('prenom') as HTMLInputElement)
+      .value;
+    const telephone = (document.getElementById('telephone') as HTMLInputElement)
+      .value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+
+    console.log('Poste demandé :', poste);
+    console.log('Nom :', nom);
+    console.log('Prénom :', prenom);
+    console.log('Numéro de téléphone :', telephone);
+    console.log('Email :', email);
   }
 }
