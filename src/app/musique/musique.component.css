@@ -106,3 +106,13 @@ main {
   background-color: #ff4500;
   border-color: #ff4500;
 }
+.details {
+  display: none;
+}
+.card:hover .nodetails {
+  display: none;
+}
+
+.card:hover .details {
+  display: block;
+}

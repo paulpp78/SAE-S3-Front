@@ -40,13 +40,20 @@
           </p>
           <div>
             <h3 class="animated bounceIn">{{ evenement.preface }}</h3>
-            <p class="card-text animated fadeIn">
-              <strong>Par :</strong>
-              <a [href]="evenement.siteWeb">{{ evenement.titreEvent }}</a>
-            </p>
-            <p class="card-text animated fadeIn">
-              <strong>Description :</strong> {{ evenement.description }}
-            </p>
+            <div class="card nodetails">
+              <div class="card-body">
+                <p class="text-center">Détails</p>
+              </div>
+            </div>
+            <div class="details">
+              <p class="card-text animated fadeIn">
+                <strong>Par :</strong>
+                <a [href]="evenement.siteWeb">{{ evenement.titreEvent }}</a>
+              </p>
+              <p class="card-text animated fadeIn">
+                <strong>Description :</strong> {{ evenement.description }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
