@@ -1,4 +1,9 @@
-/* Style pour le titre */
+@import "animate.css";
+
+main {
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+}
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -7,15 +12,14 @@ h1 {
   color: #000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Gideon Roman;
-  font-size: 60px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 50%;
+  line-height: 1;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-/* Style pour l'image du titre */
 h1 img {
   height: 2em;
   margin-right: 0.5rem;
@@ -29,46 +33,37 @@ h1 img {
 .event {
   color: #0da5e6;
   font-family: Gideon Roman;
-  font-size: 60px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 50%;
+  line-height: 1;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-/* Style pour les boutons */
-.btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.zoom-on-hover:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
 }
 
-/* Animer le texte des boutons */
-.btn-primary {
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
+@media (max-width: 768px) {
+  .back {
+    margin-top: 5%;
   }
-  40% {
-    transform: translateY(-20px);
+  h1 {
+    font-size: 1.5rem;
   }
-  60% {
-    transform: translateY(-10px);
+  .event {
+    font-size: 1.5rem;
+  }
+  .img-responsive {
+    max-height: 200px;
   }
 }

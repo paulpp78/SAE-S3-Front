@@ -1,5 +1,5 @@
 <main class="container">
-  <h1 class="back">
+  <h1 class="back animate__animated animate__bounceInDown">
     <img
       src="../../assets/title/rectangle-title.svg"
       alt="simple blue bar for design"
@@ -7,23 +7,43 @@
     Découvrez nos <span class="event">événements</span> !
   </h1>
   <section class="row">
-    <div class="col-md-6 text-start">
+    <div
+      class="col-md-6 col-sm-12 text-center text-md-start animate__animated animate__fadeInLeft"
+    >
       <div>
-        <button class="btn btn-primary" routerLink="/event-communaute">
-          La Communauté
-        </button>
+        <a routerLink="/event-communaute">
+          <img
+            src="../../assets/evenement/communaute.svg"
+            alt="Communauté"
+            class="zoom-on-hover img-responsive"
+          />
+        </a>
       </div>
     </div>
-    <div class="col-md-6 text-end">
+    <div
+      class="col-md-6 col-sm-12 text-center text-md-end animate__animated animate__fadeInRight"
+    >
       <div>
-        <button class="btn btn-primary" routerLink="/la-fete">
-          C'est la fête
-        </button>
+        <a routerLink="/la-fete">
+          <img
+            src="../../assets/evenement/la-fete.svg"
+            alt="La fête"
+            class="zoom-on-hover img-responsive"
+          />
+        </a>
       </div>
     </div>
-    <div class="col-md-12 text-center">
+    <div
+      class="col-md-12 col-sm-12 text-center animate__animated animate__fadeInUp"
+    >
       <div>
-        <button class="btn btn-primary" routerLink="/musique">Musique</button>
+        <a routerLink="/musique">
+          <img
+            src="../../assets/evenement/musique.svg"
+            alt="Musique"
+            class="zoom-on-hover img-responsive"
+          />
+        </a>
       </div>
     </div>
   </section>

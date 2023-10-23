@@ -5,92 +5,109 @@
   >
     Retour
   </button>
-  <h1 class="display-4 animated bounceInDown">Événements musicaux</h1>
-  <p class="lead animated fadeIn">
+  <h1 class="display-4 animated bounceInDown" style="font-size: 2.5rem">
+    Événements musicaux
+  </h1>
+  <p class="lead animated fadeIn" style="font-size: 1.5rem">
     Découvrez les prochains événements musicaux proposés par notre communauté.
-    Voici l'agenda :
+    <br />Voici l'agenda :
   </p>
 
   <div class="row">
-    <div *ngFor="let evenement of evenements" class="col-md-6 col-lg-4 mb-4">
-      <div class="card animated zoomIn">
-        <img
-          [src]="evenement.imageSrc"
-          [alt]="evenement.titreEvent"
-          class="card-img-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title animated bounceIn">
-            {{ evenement.titreEvent }}
-          </h2>
-          <p class="card-text animated fadeInLeft">
-            <strong>Date :</strong> {{ evenement.date }}
-          </p>
-          <p class="card-text animated fadeInRight">
-            <strong>Lieu :</strong> {{ evenement.lieu }}
-          </p>
-          <p class="card-text animated fadeInLeft">
-            <strong>Prix :</strong> {{ evenement.prix }}
-          </p>
-          <p class="card-text animated fadeInRight">
-            <strong>Durée :</strong> {{ evenement.duree }}
-          </p>
-          <p class="card-text animated fadeInLeft">
-            <strong>Restriction :</strong> {{ evenement.restriction }}
-          </p>
-          <div>
-            <h3 class="animated bounceIn">{{ evenement.preface }}</h3>
-            <div class="card nodetails">
-              <div class="card-body">
-                <p class="text-center">Détails</p>
+    <div class="col-lg-8">
+      <div class="row">
+        <div *ngFor="let evenement of evenements" class="col-md-4">
+          <div class="card mb-4 h-100">
+            <img
+              [src]="evenement.imageSrc"
+              [alt]="evenement.titreEvent"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h2 class="card-title animated bounceIn">
+                {{ evenement.titreEvent }}
+              </h2>
+              <p class="card-text animated fadeIn">
+                <strong>Date :</strong> {{ evenement.date }}
+              </p>
+              <p class="card-text animated fadeIn">
+                <strong>Lieu :</strong> {{ evenement.lieu }}
+              </p>
+              <p class="card-text animated fadeIn">
+                <strong>Prix :</strong> {{ evenement.prix }}
+              </p>
+              <p class="card-text animated fadeIn">
+                <strong>Durée :</strong> {{ evenement.duree }}
+              </p>
+              <p class="card-text animated fadeIn">
+                <strong>Restriction :</strong> {{ evenement.restriction }}
+              </p>
+              <div>
+                <h3 class="animated bounceIn" style="font-size: 1rem">
+                  {{ evenement.preface }}
+                </h3>
+
+                <div
+                  class="card nodetails mx-auto text-center"
+                  style="width: 50%"
+                >
+                  <div class="card-body">
+                    <p class="text-center small">Détails</p>
+                  </div>
+                </div>
+
+                <div class="details">
+                  <p class="card-text animated fadeIn">
+                    <strong>Par :</strong>
+                    <a [href]="evenement.siteWeb">{{ evenement.titreEvent }}</a>
+                  </p>
+                  <p class="card-text animated fadeIn">
+                    <strong>Description :</strong> {{ evenement.description }}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="details">
-              <p class="card-text animated fadeIn">
-                <strong>Par :</strong>
-                <a [href]="evenement.siteWeb">{{ evenement.titreEvent }}</a>
-              </p>
-              <p class="card-text animated fadeIn">
-                <strong>Description :</strong> {{ evenement.description }}
-              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <section class="card mt-4 animated flipInY">
-    <div class="card-body">
-      <h2 class="card-title animated bounceInDown">PLUS D'INFORMATIONS</h2>
-      <p class="card-text animated fadeIn">
-        Communauté d’Agglomération de La Porte du Hainaut<br />
-        Site minier de Wallers-Arenberg
-      </p>
-      <p class="card-text animated fadeIn">
-        Rue Michel Rondet - BP 59 - 59135 WALLERS-ARENBERG
-      </p>
-      <p class="card-text animated fadeIn">T. : 03 27 09 00 93</p>
-      <a
-        href="www.agglo-porteduhainaut.fr"
-        class="card-link animated fadeIn"
-        target="_blank"
-        >www.agglo-porteduhainaut.fr</a
+    <div class="col-lg-4">
+      <section
+        class="card mt-4 animated flipInY text-center"
+        style="display: inline-block"
       >
-      <p class="card-text animated fadeIn">
-        <strong>Service Culture - Spectacle vivant :</strong> 03 27 19 04 43
-      </p>
-      <a
-        href="mailto:culture@agglo-porteduhainaut.fr"
-        class="card-link animated fadeIn"
-        >culture@agglo-porteduhainaut.fr</a
-      >
-      <button
-        routerLink="/contact"
-        class="btn btn-primary mt-3 animated fadeInUp"
-      >
-        Contactez nous
-      </button>
+        <div class="card-body">
+          <h2 class="card-title animated bounceInDown">PLUS D'INFORMATIONS</h2>
+          <p class="card-text animated fadeIn">
+            Communauté d’Agglomération de La Porte du Hainaut<br />
+            Site minier de Wallers-Arenberg
+          </p>
+          <p class="card-text animated fadeIn">
+            Rue Michel Rondet - BP 59 - 59135 WALLERS-ARENBERG
+          </p>
+          <p class="card-text animated fadeIn">T. : 03 27 09 00 93</p>
+          <a
+            href="www.agglo-porteduhainaut.fr"
+            class="card-link animated fadeIn"
+            target="_blank"
+            >www.agglo-porteduhainaut.fr</a
+          >
+          <p class="card-text animated fadeIn">
+            <strong>Service Culture - Spectacle vivant :</strong> 03 27 19 04 43
+          </p>
+          <a
+            href="mailto:culture@agglo-porteduhainaut.fr"
+            class="card-link animated fadeIn"
+            >culture@agglo-porteduhainaut.fr</a
+          >
+          <button
+            routerLink="/contact"
+            class="btn btn-primary mt-3 animated fadeInUp"
+          >
+            Contactez nous
+          </button>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 </main>
