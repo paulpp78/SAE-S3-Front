@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EvenementComponent } from './evenement/evenement.component';
 import { CommunauteComponent } from './communaute/communaute.component';
+import { MusiqueComponent } from './musique/musique.component';
+import { LaFeteComponent } from './la-fete/la-fete.component';
+import { EventCommunauteComponent } from './event-communaute/event-communaute.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,9 @@ import { CommunauteComponent } from './communaute/communaute.component';
     ContactComponent,
     EvenementComponent,
     CommunauteComponent,
+    MusiqueComponent,
+    LaFeteComponent,
+    EventCommunauteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
