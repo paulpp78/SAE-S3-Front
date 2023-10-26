@@ -1,0 +1,227 @@
+#histoire {
+  background-color: #ececec;
+  margin: 0;
+  padding: 5%;
+  padding-top: 2%;
+}
+
+#notreHistoire #imgTextFlex {
+  display: flex;
+  align-items: center; /* Centrer verticalement les éléments */
+  margin-bottom: 5%;
+  justify-content: space-around;
+  gap: 2%;
+}
+
+#interieurBataille {
+  display: flex;
+  margin: 2%;
+  align-items: center;
+}
+
+#bataille {
+  margin: 2%;
+}
+
+#text {
+  display: flex;
+}
+
+#interieurMine {
+  display: flex;
+  margin: 2%;
+  align-items: center;
+}
+
+#interieurAbbayes {
+  display: flex;
+  margin: 2%;
+  align-items: center;
+}
+
+#text1,
+#text2,
+#text3 {
+  flex: 1; /* Cette propriété permet à chaque conteneur de prendre un tiers de la largeur totale */
+  padding: 10px;
+  text-align: center;
+}
+
+#text1:hover,
+#text2:hover,
+#text3:hover {
+  background-color: #41537d;
+}
+
+#text1:hover h2,
+#text2:hover h2,
+#text3:hover h2 {
+  color: white; /* Si vous voulez que le texte du h1 devienne blanc lors du survol pour un meilleur contraste */
+}
+
+#hovered-content h2,
+#hovered-content p {
+  color: white;
+}
+
+#text h2 {
+  cursor: pointer;
+  margin: 0;
+  padding-bottom: 10px;
+  width: 100%; /* Cette propriété s'assure que le h1 prend toute la largeur de son conteneur */
+  height: 100%;
+  /*margin-bottom: 3%;*/
+}
+
+#text1 p,
+#text2 p,
+#text3 p {
+  display: none;
+}
+
+#text1 img,
+#text2 img,
+#text3 img {
+  display: none;
+}
+
+#hovered-content {
+  display: flex;
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+#hovered-content img {
+  max-width: 50%; /* Permet à l'image de prendre jusqu'à la moitié de la largeur */
+  height: auto;
+  margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+
+#text > div.active {
+  background-color: #41537d;
+  color: white;
+}
+
+/*********************Format Téléphone*******************/
+@media screen and (max-width: 768px) {
+  #notreHistoire #imgTextFlex {
+    display: grid;
+    justify-items: center;
+    margin-top: 2%;
+  }
+
+  #notreHistoire #imgTextFlex p {
+    margin-top: 2%;
+  }
+
+  #interieurBataille {
+    display: grid;
+    justify-items: center;
+  }
+
+  #interieurMine {
+    display: grid;
+    justify-items: center;
+  }
+
+  #interieurAbbayes {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+#Patrimoine {
+  padding: 5%;
+}
+
+#Pat {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
+
+  align-items: center;
+  text-align: center;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#Pat .imagePatrimoine {
+  margin-bottom: 2%;
+}
+
+#Pat .imagePatrimoine .description {
+  display: grid;
+  align-items: center;
+}
+
+.imagePatrimoine {
+  position: relative;
+  width: 268px;
+  height: 356px;
+}
+
+.imagePatrimoine img {
+  width: 100%;
+  height: 100%;
+}
+
+.imagePatrimoine .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b3752; /* couleur de l'image après le hover */
+  color: white; /* couleur du texte */
+  opacity: 0;
+}
+
+.imagePatrimoine:hover .description {
+  opacity: 1; /* le texte visible lors du hover */
+}
+body {
+  font-family: "Gideon Roman";
+  position: relative;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+#elue {
+  padding: 5%;
+}
+
+#elue #carousel {
+  display: flex;
+  align-items: center;
+}
+
+#elue #carousel p {
+  width: 70%;
+  margin: 2%;
+}
+
+#elue #carouselExampleIndicators {
+  width: 40%;
+}
+
+#carouselExampleIndicators {
+  max-width: 250px;
+  margin: auto;
+}
+
+/*********************Format Téléphone*******************/
+@media screen and (max-width: 768px) {
+  #elue #carousel {
+    display: block;
+  }
+
+  #elue #carousel p {
+    width: 95%;
+    margin: 2%;
+  }
+}

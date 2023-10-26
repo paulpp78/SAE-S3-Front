@@ -21,7 +21,7 @@ Dans ce README, nous expliquerons comment cloner le projet, l'exécuter en local
 Pour cloner ce projet sur votre machine locale, assurez-vous d'avoir Git installé. Ensuite, exécutez la commande suivante :
 
 ```bash
-git clone <git@github.com>:paulpp78/SAE-S3-Front.git main
+git clone git@github.com:paulpp78/SAE-S3-Front.git
 ```
 
 Une fois le projet cloné, accédez au répertoire du projet à l'aide de la commande `cd` :

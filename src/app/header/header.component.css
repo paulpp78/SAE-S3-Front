@@ -1,103 +1,177 @@
-/* Styles du header */
+/* Ajustez la hauteur du header */
 .header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 350px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  flex-direction: column;
+  height: 100%;
 }
 
-/* Styles pour le bouton et la météo */
-.buttonAndWeather {
-  text-align: center;
+/* Si vous voulez également ajuster la hauteur de la barre de navigation */
+.navbar-custom {
+  height: 1%;
+  line-height: 100%;
 }
 
-.buttonAndWeather button {
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Ajustez la hauteur du logo et de la zone de recherche */
+.logo-image {
+  max-height: 10%;
 }
 
-.meteo {
-  font-size: 18px;
-  color: #fff;
-  margin: 10px 0;
+.form-control.border-light {
+  height: 20%;
 }
 
-/* Styles pour les arrière-plans spécifiques aux pages */
 .home-background {
   background-image: url("../../assets/header/home.png");
+  z-index: 1;
 }
 
 .communaute-background {
   background-image: url("../../assets/header/communauté.jpeg");
+  z-index: 1;
 }
 
 .evenement-background {
-  background-image: url("../../assets/header/home.png");
+  background-image: url("../../assets/header/evenement.png");
+  z-index: 1;
 }
 
 .contact-background {
   background-image: url("../../assets/header/contact.png");
 }
 
-/* Styles pour les boutons et liens */
-.btn,
-.btn-link {
-  background-color: #7e7a7a;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  text-decoration: none;
-}
-
-.btn:hover,
-.btn-link:hover {
-  background-color: #7e7a7a;
-}
-
 /* Styles pour la barre de navigation */
-.navbar-brand img {
-  width: 50%;
-  margin-right: 10%;
+.navbar-custom {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  z-index: 2;
 }
 
-.navbar.navbar-expand-lg {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-custom .navbar-toggler {
+  color: #000;
+  border: 1px solid #fff;
+  padding: 1.25rem 1.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
   background-color: #fff;
-  padding: 10px;
+  border-radius: 50%;
+  transition: box-shadow 0.15s ease-in-out;
+  z-index: 2;
 }
 
-.btn-nav-imp {
-  background: none;
-  border: none;
-  cursor: pointer;
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem #fff;
 }
 
-/* Styles responsifs pour les petits écrans */
-@media (max-width: 768px) {
-  .navbar.navbar-expand-lg {
-    flex-direction: column;
-    align-items: flex-start;
+.navbar-custom .navbar-collapse {
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Styles pour le bouton "Menu" */
+.navbar-toggler-text {
+  font-weight: bold;
+}
+
+/* Styles pour l'image */
+.img-fluid {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+/* Styles pour le champ de recherche */
+.form-control.border-light {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+/* Styles pour les liens de navigation */
+.navbar-nav .nav-link {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #13adef;
+}
+
+/* Styles pour la section personnalisée */
+.custom-section {
+  height: 500px;
+  background-size: cover;
+}
+
+/* Styles pour le logo */
+.logo-image {
+  max-width: 100%;
+  border: 39px solid #fff;
+  border-radius: 15%;
+}
+
+/* Styles pour le bouton de recherche */
+.search-button {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+/* Styles pour le titre de la section */
+.section-title {
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #000;
+}
+
+/* Styles pour le texte de la section */
+.section-text {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+}
+
+/* Styles pour le bouton "Contact" */
+.contact-button {
+  background-color: #0f8abf;
+  border-color: #0f8abf;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.contact-button:hover {
+  background-color: #13adef;
+  border-color: #13adef;
+}
+
+#hainaut_main_nav .navbar-nav {
+  z-index: 2;
+}
+
+@media (min-width: 576px) {
+  .hainaut-carousel .h1 {
+    font-size: 1em !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #hainaut_main_nav .navbar-nav {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 992px) {
+  #hainaut_main_nav .navbar-nav {
+    max-width: 550px;
   }
 
-  .navbar-brand img {
-    width: 80px;
-  }
-
-  .btn-nav-imp {
-    margin-top: 20px;
-  }
-
-  .meteo {
-    font-size: 16px;
-    margin-top: 20px;
+  #hainaut-carousel .carousel-item {
+    min-height: 30rem !important;
   }
 }

@@ -3,7 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  styleUrls: [
+    './footer.component.css',
+    '../../assets/home/css/fontawesome.min.css',
+  ],
 })
 export class FooterComponent {
   address: string = 'Av, Michel Rondet.';
