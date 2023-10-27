@@ -9,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class HomeComponent implements OnInit {
-  weatherInfo: string = '';
-  city: string = 'Denain,fr';
+  weatherInfo: string = ''; // Informations sur la météo
+  city: string = 'Denain,fr'; // Ville par défaut pour la météo
 
   ngOnInit() {
     const apiKey = 'bdb616a0479919c67aecbc38787f1d02';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${apiKey}`;
 
+    // Effectue une requête à l'API OpenWeatherMap pour obtenir des données météo
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {

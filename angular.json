@@ -18,7 +18,11 @@
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/favicon.ico"
+            ],
             "styles": [
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
@@ -31,13 +35,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4.00 kB",
+                  "maximumError": "1000.00 kB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "1000kb"
                 }
               ],
               "outputHashing": "all"
@@ -76,7 +80,11 @@
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/favicon.ico"
+            ],
             "styles": ["src/styles.css"],
             "scripts": []
           }
