@@ -1,0 +1,52 @@
+.navbar-light .navbar-toggler {
+    color: #000;
+    border: 1px #fff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem #ffffff;
+}
+
+.navbar-toggler {
+    padding: 1.25rem 1.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: box-shadow .15s ease-in-out;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.navbar-custom .navbar-collapse {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.custom-section {
+    height: 500px;
+    background-size: cover;
+}
+
+img.card-img-top.img-fluid.w-100 {
+    border: 39px solid #fff;
+    border-radius: 15%;
+}
+
+.input-group-text {
+    background-color: #fff;
+}
+
+.img-fluid {
+    border-radius: 20px;
+}
+
+a.btn.btn-primary.contact {
+    border: 2px solid;
+    border-radius: 10px;
+}

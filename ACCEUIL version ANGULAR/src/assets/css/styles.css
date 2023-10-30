@@ -1,0 +1,173 @@
+a,body,div,input,label,li,p,ul {
+  font-family: Roboto, sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important
+}
+
+.h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important
+}
+
+.h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 30px !important;
+  font-weight: 300
+}
+
+.h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 22px !important
+}
+
+.title-caroussel {
+  color: #13adef !important
+}
+
+.text-light {
+  color: #fff !important
+}
+
+.bg-dark {
+  background-color: #13adef !important
+}
+
+.bg-light {
+  background-color: #fff !important
+}
+
+.btn-news {
+  background-color: #0f8abf !important;
+  border-color: #0f8abf !important
+}
+#hainaut_nav_top {
+  min-height: 40px
+}
+
+#hainaut_nav_top * {
+  font-size: .9em !important
+}
+
+#hainaut_main_nav a {
+  color: #212934
+}
+
+#hainaut_main_nav a:hover {
+  color: #13adef
+}
+
+#hainaut_main_nav .navbar .nav-icon {
+  margin-right: 20px
+}
+
+#hainaut-carousel {
+  background: #fff !important
+}
+
+#hainaut-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #13adef
+}
+
+#hainaut-carousel .carousel-control-next i,
+#hainaut-carousel .carousel-control-prev i {
+  color: #13adef !important;
+  font-size: 2.8em !important
+}
+
+.hainaut-carousel .h1 {
+  font-size: .5em !important;
+  color: #000 !important
+}
+
+.form-control {
+  border: 1px solid #e8e8e8
+}
+
+#hainaut_footer a {
+  color: #fff
+}
+
+#hainaut_footer a:hover {
+  color: #f3eded
+}
+
+#hainaut_footer ul.footer-link-list li {
+  padding-top: 10px
+}
+
+#hainaut_footer ul.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em
+}
+
+#hainaut_footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s
+}
+
+#hainaut_footer ul.footer-icons li:hover i {
+  color: #212934;
+  transition: .5s
+}
+
+#hainaut_footer .border-light {
+  border-color: #fff !important
+}
+
+@media (min-width:576px) {
+  .hainaut-carousel .h1 {
+    font-size: 1em !important
+  }
+}
+
+@media (min-width:768px) {
+  #hainaut_main_nav .navbar-nav {
+    max-width: 450px
+  }
+}
+
+@media (min-width:992px) {
+  #hainaut_main_nav .navbar-nav {
+    max-width: 550px
+  }
+
+  #hainaut-carousel .carousel-item {
+    min-height: 30rem !important
+  }
+}
+
+.card-title {
+  width: 610px;
+  height: auto;
+  font-family: 'Gideon Roman';
+  font-size: 40px;  /* Ajustez la taille du texte si nécessaire */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* Ajustez la hauteur de ligne pour qu'elle soit égale à font-size pour une meilleure lisibilité */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.card-title .decouvrez {
+  color: #000;
+}
+
+.card-title .agglomeration {
+  color: #0DA5E6;
+}
+
+.btn {
+  color: #FFF;
+  font-family: 'Gideon Roman';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 71.429% */
+  text-transform: uppercase;
+  border: none; /* Supprime la bordure, à réajuster si vous voulez une bordure */
+}
