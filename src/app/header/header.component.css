@@ -21,20 +21,32 @@
 .home-background {
   background-image: url("../../assets/header/home.png");
   z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .communaute-background {
   background-image: url("../../assets/header/communauté.jpeg");
   z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .evenement-background {
   background-image: url("../../assets/header/evenement.png");
   z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .contact-background {
   background-image: url("../../assets/header/contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Styles pour la barre de navigation */
@@ -96,6 +108,10 @@
 
 .navbar-nav .nav-link:hover {
   color: #13adef;
+}
+
+.header .container.py-5 .row.text-center.pt-3 .col-lg-6.m-auto img {
+  margin-top: 11%;
 }
 
 /* Styles pour la section personnalisée */
