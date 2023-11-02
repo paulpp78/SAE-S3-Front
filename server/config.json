@@ -1,5 +1,5 @@
 {
-  "corsConf": "https://example.com",
+  "corsConf": "*",
   "port": 80,
   "staticDirectory": "dist",
   "firstPage": "index.html"
