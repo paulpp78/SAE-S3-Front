@@ -27,7 +27,7 @@ git clone git@github.com:paulpp78/SAE-S3-Front.git
 Une fois le projet cloné, accédez au répertoire du projet à l'aide de la commande `cd` :
 
 ```bash
-cd SaeFront
+cd SAE-S3-Front
 ```
 
 ## Installer les dépendances
@@ -58,12 +58,12 @@ SaeFront/
 ├── src/
 │ ├── app/
 │ │ ├── components/ # Composants de l'application
-│ │ ├── services/ # Services pour la logique métier
+│ │ ├── services/ # Services pour interagir avec l'API
 │ │ ├── models/ # Modèles de données
 │ │ ├── app-routing.module.ts # Configuration des routes
 │ │ ├── app.module.ts # Configuration du module principal
 │ │
-│ ├── assets/ # Fichiers statiques (images, styles, etc.)
+│ ├── assets/ # Fichiers statiques (images, polices, etc.)
 │
 ├── angular.json # Configuration globale du projet
 ├── package.json # Liste des dépendances et scripts
