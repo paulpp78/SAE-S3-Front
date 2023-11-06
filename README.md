@@ -43,7 +43,7 @@ npm install
 Pour lancer le serveur de développement, exécutez la commande suivante :
 
 ```bash
-ng serve
+ng serve -o
 ```
 
 Cela démarrera un serveur de développement et l'application sera accessible à l'adresse : `<http://localhost:4200/`>. L'application sera automatiquement rechargée si vous modifiez des fichiers source.
@@ -115,6 +115,8 @@ Puis demmarez le server
 ```bash
 npm start
 ```
+
+Cela démarrera le serveur et l'application sera accessible à l'adresse : `<http://localhost:80/`>.
 
 ## Tests unitaires
 
