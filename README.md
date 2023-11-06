@@ -98,7 +98,7 @@ Les artefacts de construction seront stockés dans le répertoire `server/dist/`
 
 ### Serveur de production
 
-Nous avons ajouté un server pour la production, pour le lancer, vous devez vous rendre dans le dossier server.
+Nous avons ajouté un server nodeJS et expressJS pour la production, pour le lancer, vous devez vous rendre dans le dossier server.
 
 ```bash
 cd server
